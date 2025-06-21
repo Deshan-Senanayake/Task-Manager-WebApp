@@ -1,9 +1,9 @@
 import requests
 
-url = "http://localhost:5000/api/auth/verify-otp"
+url = "http://localhost:5000/api/auth/login"
 data = {
-    "email": "",
-    "otp": ""  # Replace with the real OTP from your Gmail
+    "email": "smddsenyake@gmail.com",
+    "password": "test12345"
 }
 
 response = requests.post(url, json=data)
