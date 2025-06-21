@@ -1,7 +1,6 @@
 import requests
 
-token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTcwYzI1ZTA2MzFkMWVhYzA3N2VmZSIsImVtYWlsIjoic21kZHNlbnlha2VAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NTA1MzYxMDgsImV4cCI6MTc1MDUzOTcwOH0.Hwh5VUmcmRUL4jz0suZbiiLL9TaZGwsOB_UAZpb9y1Q"
-
+token = ""
 data = {
     "title": "Finish frontend",
     "description": "Build the login page UI",
