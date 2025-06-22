@@ -61,3 +61,38 @@ exports.deleteTask = async (req, res) => {
         res.status(500).json({ message: "Failed to delete task" });
     }
 };
+
+
+const PDFDocument = require("pdfkit");
+
+exports.exportTasksToPDF = async (req, res) => {
+    try {
+        const tasks = await Task.find({ createdBy: req.user.id });
+
+        const doc = new PDFDocument();
+
+        // Set headers
+        res.setHeader("Content-Type", "application/pdf");
+        res.setHeader("Content-Disposition", "attachment; filename=tasks.pdf");
+
+        doc.pipe(res);
+
+        doc.fontSize(20).text("Task Report", { align: "center" });
+        doc.moveDown();
+
+        tasks.forEach((task, index) => {
+            doc.fontSize(14).text(`${index + 1}. Title: ${task.title}`);
+            doc.text(`   Description: ${task.description || "N/A"}`);
+            doc.text(`   Deadline: ${task.deadline?.toISOString().split('T')[0] || "N/A"}`);
+            doc.text(`   Status: ${task.status}`);
+            doc.text(`   Assigned To: ${task.assignedTo}`);
+            doc.moveDown();
+        });
+
+        doc.end();
+
+    } catch (err) {
+        console.error("PDF Export Error:", err.message);
+        res.status(500).json({ message: "Failed to generate PDF" });
+    }
+};
