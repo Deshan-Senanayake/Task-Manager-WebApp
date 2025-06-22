@@ -13,3 +13,4 @@ logs/
 # System
 .DS_Store
 .env_files.zip
+.idea/frontend/tailwindcss.exe
