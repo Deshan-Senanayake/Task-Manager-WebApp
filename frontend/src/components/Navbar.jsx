@@ -1,42 +1,69 @@
 // src/components/Navbar.jsx
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 
 const Navbar = () => {
+    const { user, logout } = useAuth();
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+        logout();
+        navigate('/login');
+    };
+
     return (
         <nav style={styles.nav}>
             <div style={styles.logo}>TaskManager</div>
-            <ul style={styles.navLinks}>
-                <li><Link to="/" style={styles.link}>Home</Link></li>
-                <li><Link to="/register" style={styles.link}>Register</Link></li>
-                <li><Link to="/login" style={styles.link}>Login</Link></li>
-            </ul>
+            <div style={styles.links}>
+                <Link to="/" style={styles.link}>Home</Link>
+                {user ? (
+                    <>
+                        <span style={styles.user}>Welcome, {user.email}</span>
+                        <button onClick={handleLogout} style={styles.button}>Logout</button>
+                    </>
+                ) : (
+                    <>
+                        <Link to="/register" style={styles.link}>Register</Link>
+                        <Link to="/login" style={styles.link}>Login</Link>
+                    </>
+                )}
+            </div>
         </nav>
     );
 };
 
 const styles = {
     nav: {
+        backgroundColor: '#333',
+        color: '#fff',
+        padding: '10px 20px',
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        backgroundColor: '#333',
-        padding: '0.75rem 1.5rem',
     },
     logo: {
-        color: '#fff',
         fontWeight: 'bold',
-        fontSize: '1.2rem',
+        fontSize: '20px',
     },
-    navLinks: {
+    links: {
         display: 'flex',
-        gap: '1rem',
-        listStyle: 'none',
+        alignItems: 'center',
+        gap: '15px',
     },
     link: {
-        color: '#fff',
+        color: 'white',
         textDecoration: 'none',
-        fontWeight: '500',
+    },
+    user: {
+        color: '#ccc',
+    },
+    button: {
+        backgroundColor: '#555',
+        color: '#fff',
+        border: 'none',
+        padding: '5px 10px',
+        cursor: 'pointer',
     }
 };
 

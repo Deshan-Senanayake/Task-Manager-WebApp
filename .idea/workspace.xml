@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4981996-e17e-4fa0-af8c-ec1772c0954a" name="Changes" comment="Frontend with React + vite">
+    <list default="true" id="a4981996-e17e-4fa0-af8c-ec1772c0954a" name="Changes" comment="NavBar">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Login.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +76,7 @@
       <updated>1750634038849</updated>
       <workItem from="1750634040066" duration="27000" />
       <workItem from="1750634120085" duration="96000" />
-      <workItem from="1750685722799" duration="4876000" />
+      <workItem from="1750685722799" duration="11711000" />
     </task>
     <task id="LOCAL-00001" summary="Frontend with React + vite">
       <option name="closed" value="true" />
@@ -81,7 +86,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750634533872</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="NavBar">
+      <option name="closed" value="true" />
+      <created>1750699639322</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1750699639322</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,6 +113,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Frontend with React + vite" />
-    <option name="LAST_COMMIT_MESSAGE" value="Frontend with React + vite" />
+    <MESSAGE value="NavBar" />
+    <option name="LAST_COMMIT_MESSAGE" value="NavBar" />
   </component>
 </project>
